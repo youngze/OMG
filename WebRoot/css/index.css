@@ -1,0 +1,212 @@
+*{
+    		margin: 0;
+    		padding: 0;
+    		font-family: "Mirosoft YaHei";
+    	}
+.zdgg{
+	position:fixed;
+	left: 18%;
+	top: 17%;
+	z-index:2003;
+}
+.zdgg img{
+	width: 892px;
+	height: 400px;
+}
+#close_gugao{
+	position: absolute;
+	top: 10px;
+	left: 95%;
+	color:white;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+		.banner{
+		      height: 601px;
+			  width: 100%;
+			  background: url(../images/hy8.jpg) no-repeat center top;
+			}
+	    .banner h1{
+		     position: relative;
+			 width: 700px;
+		     top: 278px;
+		     left: 540px;
+		     color: white;
+	    }
+		.banner #content{
+			position:absolute;
+			top:128px;
+			left:400px;
+		}
+	    .banner p input,.banner p button{
+	    	  position: relative;
+		      top: 329px;
+			  height: 52px;
+		      background-color: rgba(0, 0, 0, 0.2);
+		      border-radius: 40px;
+		      font-size:18px;
+		      color: white;
+	    }
+		.banner p input {
+			left: 330px;
+			width: 500px;
+			padding-left: 25px;
+		}
+		.banner p button{
+			left: 362px;
+			width: 100px;
+			cursor: pointer;
+		}
+		.content {
+			margin:30px 0;
+			position:relative;
+			height: 250px;
+		}
+		#arrhd {
+			display: none;}
+		#arrhd span{ width:40px; height:40px; position:absolute; left:5px;
+			         top:50%; margin-top:-80px; background:#000; cursor:pointer;
+					line-height:40px; text-align:center; font-weight:bold; font-family:'黑体';
+					font-size:30px; color:#fff; opacity:0.3; border:1px solid #fff;}
+		#arrhd #righthd{right:5px; left:auto;}
+		.content .product{
+			width: 1200px;
+			height: 210px;
+			overflow:hidden;
+			position:relative;
+		}
+		.content .product ul{
+			position:absolute;
+			top:0;
+			list-style: none;
+			width: 300%;
+			overflow: hidden;
+		}
+		.product ul li{
+			width: 210px;
+			float:left;
+			margin-left: 50px;
+
+		}
+
+		.content .product ul li p img{
+			height: 120px;
+		}
+		.content .product ul li h3{
+			font-size: 20px;
+			line-height: 38px;
+		}
+		.content .product ul li .play,
+		.content .product ul li h3{
+			text-align: center;
+			padding-right: 20px;
+        }
+		.content .product ul li .play a{
+		    font-size: 16px;
+			color:#38B774;
+			text-decoration: none; 
+			padding-right: 7px;
+			background:url(../images/sanjiaoxing.png) no-repeat right center;
+	}
+.naoz{
+	background:#369;
+	width: 184px;
+	height: 128px;
+}
+.naoz p{
+	font-size:17px;
+	text-align:center;
+	line-height:26px;
+	color:#fff;
+}
+.naoz span{
+	display:block;
+	width: 90px;
+	height: 50px;
+	font-size:33px;
+	text-align:center;
+	line-height:50px;
+	color:#fff;
+	background:yellowgreen;
+	margin:10px auto;
+}
+.naoz h3{
+	padding-top:10px;
+}
+
+		.footer{
+		   overflow: hidden;
+	}
+   		.footer .inner_c{
+	    	width: 1000px;
+	    	margin: 0 auto;
+	    	border-top: 1px solid #DBE1E7;
+    }
+   	 .footer .left p ul{
+	    	padding-top: 94px;
+	   }
+    .footer .inner_c .left ul li{
+    	width: 500px;
+    	list-style: none;
+    	height: 40px;
+    	border-bottom: 1px solid #DBE1E7;
+    	padding-top: 11px;
+    	font-size: 12px;
+    	color: #AFBED2;
+    }
+    .footer .inner_c .left ul li a{
+    	font-size: 18px;
+    	color: blue;
+    	padding:9px 0 0 23px;
+    	text-decoration: none;
+    }
+    .footer .inner_c .left p{
+    	display: inline-block;
+    	height: 120px;
+    	line-height: 120px;
+    	font-size: 25px;
+    	color: blue;
+    }
+    .footer .inner_c .left{
+    	float: left;
+    }
+    .footer .inner_c .right{
+    	float:right;
+    	width: 500px;
+    	height: 310px;
+    	margin-top: 54px;
+    	background:url(../images/hy9.jpg) no-repeat right center;
+    }
+    .footer .inner_c .right h1{
+    	font-size: 28px;
+    	padding:35px 0 0 15px;
+    	color: white;
+    }
+    .footer .inner_c .right h4{
+    	color: white;
+    	padding-left: 22px;
+    	font-size: 12px;
+    }
+    .footer .inner_c .right ul{
+    	list-style: none;
+    	padding:26px 0 0 20px;
+    }
+    .footer .inner_c .right ul li{
+    	color: white;
+
+    }
+    .footer .inner_c .right ul li a{
+    	display: block;
+    	width: 306px;
+    	color: white;
+    	text-decoration: none;
+    	font-size: 14px;
+    	line-height: 34px;
+    	border-bottom: 1px solid white;
+    }
+    .footer .inner_c ul li a:hover,
+    .footer .inner_c .right ul li a:hover{
+    	color: black;
+        font-weight: bold;
+    }

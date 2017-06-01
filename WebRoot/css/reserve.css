@@ -1,0 +1,239 @@
+*{
+	    	margin: 0;
+	    	padding:0;
+	    }
+	    body{
+    		font-family: "Mirosoft YaHei";
+    	}
+
+	.cjl{
+		display:block;
+		position:absolute;
+		top:452px;
+		left:750px;
+	}
+	.cjl .title{
+		width:400px;
+		height:70px;
+		margin:12px auto;
+		padding-top:30px;
+		text-align:center;
+		font-size:40px;
+		font-weight:bold;
+		color:#f00;
+	}
+	.cjl .btns{
+		width:190px;
+		height:30px;
+		margin:0 auto;
+	}
+	.cjl .btns span{
+		display:block;
+		float:left;
+		width:80px;
+		height:27px;
+		line-height:27px;
+		background:#036;
+		border:1px solid #eee;
+		border-right:10px;
+		color:#fff;
+		text-align:center;
+		font-size:14px;
+		cursor: pointer;
+	}
+.banner{
+	overflow: hidden;
+	margin:0 20px 0 10px;
+}
+.banner dl{
+	font-size: 35px;
+	font-weight: 900;
+}
+.banner .left{
+	height: 330px;
+	float: left;
+	padding:70px 0 0 100px;
+}
+.banner dt{
+	padding:10px 0;
+	font-weight: 700;
+	font-size:25px;
+}
+.banner .left dd{
+	padding: 10px 0;
+	font-weight: 700;
+	font-size:20px;
+}
+.banner dd i{
+	color:blue;
+	font-size: 25px;
+	font-weight: 700
+}
+.banner .right{
+	float:right;
+}
+.banner .right img{
+	padding:60px 0 0 0;
+	width: 700px;
+}
+.lbt ul{list-style:none;}
+.lbt ul li img{
+	vertical-align:top;
+	width: 700px;
+	height: 400px;
+}
+.lbt{
+	width: 700px;
+	height: 400px;
+	overflow:hidden;
+	position:relative;
+}
+.lbt ul{
+	width: 600%;
+	height: 400px;
+	position:absolute;
+	top: 0;
+	left: 0;
+}
+.lbt ul li{
+	float:left;
+}
+	.footer{
+
+		margin: 0 10px 100px 100px;
+	}
+	.footer .top{
+		background: #F3F3F3;
+		height: 40px;
+		width: 1195px;
+		position:relative;
+	}
+	.footer .top a{
+		text-decoration: none;
+		line-height: 40px;
+		font-weight: 700;
+		margin-right:25px;
+	}
+	.footer .top img{
+		position:absolute;
+		width: 400px;
+		height: 400px;
+		top:42px;
+		left:739px;
+		cursor:pointer;
+
+	}
+	.footer .buttom{
+		margin:50px 0 0 0;
+		padding-bottom: 30px;
+		border-bottom:1px solid #51B5E9;
+        overflow: hidden;
+        width: 770px;
+	}
+	.footer .buttom img{
+		height: 300px;
+		width: 687px;
+		float: left;
+	}
+	.footer .last{
+		margin: 30px 0 0 0px;
+	}
+	.footer .last p{
+		margin:20px;
+		position:relative;
+	}
+	.footer .last span{
+		font-size: 35px;
+		font-weight: 800;
+	}
+	.footer .last button{
+		width: 90px;
+		height: 35px;
+		font-size: 15px;
+		cursor: pointer;
+		position:absolute;
+		top: 0;
+		right:0;
+	}
+	.footer ul{
+		list-style: none;
+	}
+	.footer #change ul{
+		width: 877px;
+		height: 687px;
+	}
+	.footer #change li{
+		width: 700px;
+		height: 687px;
+		display: none;
+	}
+	.show{
+		display:block!important;
+	}
+#change dl{
+	font-size:25px;
+	margin-buttom:5px;
+}
+#change dd{
+	border-bottom: 1px solid #ccc;
+	margin:5px 5px 15px 0;
+}
+#change dd span{
+	margin-right:5px;
+}
+#change .right img,
+#change .thrpc{
+	height: 300px;
+	width: 687px;
+}
+#change .cgjs{
+	width: 687px;
+}
+#change .threebox .xhx{
+	border-bottom: 1px solid #fff;
+}
+
+.box{
+	height: auto;
+	padding:10px 0;
+	margin-left:100px;
+}
+.box textarea{
+	width: 450px;
+	margin:0 10px;
+	font-size: 25px;
+}
+.box ul{
+	list-style-type: none;
+}
+.box li{
+	width: 450px;
+	border-bottom:1px dashed #ccc;
+	margin-left:10px;
+}
+.box li a{
+	float:right;
+}
+.box span{
+	display:block;
+	font-size: 20px;
+	padding-bottom: 40px;
+}
+#button{
+	font-size:15px;
+	width: 40px;
+	height: 30px;
+	border-radius: 50%;
+}
+#button ul li i{
+	float: right;
+}
+.box a img{
+	float:left;
+	width: 400px;
+	height: 200px;
+	margin-right:150px;
+}
+#ps{
+	margin-bottom:15px;
+}

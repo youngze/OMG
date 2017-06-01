@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- 先配置C3P0的连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql:///crm?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="user" value="root" />
+		<property name="password" value="123" />
+	</bean>
+
+	<!-- LocalSessionFactoryBean加载配置文件 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<!-- 先加载连接池 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 加载方言，加载可选 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+
+		<!-- 引入映射的配置文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/itheima/domain/User.hbm.xml</value>
+				<value>com/itheima/domain/Gymbean.hbm.xml</value>
+				<value>com/itheima/domain/UserComment.hbm.xml</value>
+				<value>com/itheima/domain/SolrBean.hbm.xml</value>
+				<value>com/itheima/domain/OrderBean.hbm.xml</value>
+				<value>com/itheima/domain/Order_total.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 先配置平台事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 开启事务的注解 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- 配置客户模块 -->
+	 <!-- <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="get*" propagation="SUPPORTS" read-only="true" />
+            <tx:method name="count*" propagation="SUPPORTS" read-only="true" />
+            <tx:method name="find*" propagation="SUPPORTS" read-only="true" />
+            <tx:method name="list*" propagation="SUPPORTS" read-only="true" />
+            <tx:method name="*" read-only="false" propagation="REQUIRED" />
+        </tx:attributes>
+    </tx:advice> -->
+
+	<!-- 配置用户的模块 -->
+	<bean id="userAction" class="com.itheima.web.action.UserAction"
+		scope="prototype">
+		<property name="userService" ref="userService" />
+	</bean>
+
+	<bean id="userService" class="com.itheima.service.UserServiceImpl">
+		<property name="userDao" ref="userDao" />
+	</bean>
+
+	<bean id="userDao" class="com.itheima.dao.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 配置用户评论模块 -->
+	<bean id="userCommentAction" class="com.itheima.web.action.UserCommentAction"
+		scope="prototype">
+		<property name="userCommentService" ref="userCommentService" />
+	</bean>
+
+	<bean id="userCommentService" class="com.itheima.service.UserCommentServiceImpl">
+		<property name="userCommentDao" ref="userCommentDao" />
+	</bean>
+
+	<bean id="userCommentDao" class="com.itheima.dao.UserCommentDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	
+	<!-- solr搜索模块 -->
+	<bean id="solrAction" class="com.itheima.web.action.SolrAction"
+		scope="prototype">
+		<property name="solrService" ref="solrService" />
+	</bean>
+
+	<bean id="solrService" class="com.itheima.service.SolrServiceImpl">
+		<property name="solrDao" ref="solrDao" />
+	</bean>
+
+	<bean id="solrDao" class="com.itheima.dao.SolrDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	
+	<!-- 体育馆 -->
+	<bean id="gymAction" class="com.itheima.web.action.GymAction" scope="prototype">
+		<property name="gymService" ref="gymService" />
+	</bean>
+	
+	<bean id="gymService" class="com.itheima.service.GymServiceImpl">
+		<property name="gymDao" ref="gymDao" />
+	</bean>
+	
+	<bean id="gymDao" class="com.itheima.dao.GymDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 配置用户提交订单模块 -->
+	<bean id="orserAction" class="com.itheima.web.action.OrderAction"
+		scope="prototype">
+		<property name="orderService" ref="orderService" />
+	</bean>
+
+	<bean id="orderService" class="com.itheima.service.OrderServiceImpl">
+		<property name="orderDao" ref="orderDao" />
+	</bean>
+
+	<bean id="orderDao" class="com.itheima.dao.OrderDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+

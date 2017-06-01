@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+ <class name="com.itheima.domain.OrderBean" table="order_info">
+  <id column="order_id" name="order_id">
+   <generator class="native"/>
+  </id>
+  <property column="user_code" name="user_code"/>
+  <property column="amount" name="amount"/>
+  <property column="money" name="money"/>
+  <property column="time" name="time"/>
+  <property column="order_coach" name="order_coach"/>
+ </class>
+</hibernate-mapping>

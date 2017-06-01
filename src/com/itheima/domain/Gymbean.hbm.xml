@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+	<class name="com.itheima.domain.GymBean" table="gym">
+		<id name="gym_id" column="gym_id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="gym_project" column="gym_project"/>
+		<property name="gym_time_start" column="gym_time_start"/>
+		<property name="gym_price" column="gym_price"/>
+		<property name="gym_time_end" column="gym_time_end"/>
+	</class>
+
+</hibernate-mapping>    

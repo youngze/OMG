@@ -1,0 +1,28 @@
+package com.itheima.domain;
+
+public class SolrBean {
+
+	private int id;
+	private String area;
+	private String image;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getArea() {
+		return area;
+	}
+	public void setArea(String area) {
+		this.area = area;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	
+}
